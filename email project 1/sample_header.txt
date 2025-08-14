@@ -1,0 +1,1145 @@
+Delivered-To: kratikalko522@gmail.com
+Received: by 2002:a05:612c:1d8d:b0:4e6:2ea:bf93 with SMTP id ja13csp1334472vqb;
+        Mon, 4 Aug 2025 04:39:08 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFreq01AVX3FPdijOyHZBJdjr9vxabjfGkbrxnsdtnaedjscINCM9I6ET675HeSBrhRS8eo
+X-Received: by 2002:a05:6a00:6f5c:b0:76b:ed13:40f5 with SMTP id d2e1a72fcca58-76bed13429amr11466787b3a.18.1754307548162;
+        Mon, 04 Aug 2025 04:39:08 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1754307548; cv=none;
+        d=google.com; s=arc-20240605;
+        b=DUyrbMCnOz/yMMtYahbAIZnV6z/Ggc8WCypsXCbrw+UZbj2m7TY9LFNnLP56Uco+tZ
+         FEw91D7zxcYjDEA15k2D7lwY/mPPxQAf+AxU72sKk0rKFKIaGxlsja1UKW83W86Cj5Ub
+         e3NIUsVQ+xun9cB/SblIgGheY71jy+Xa2H8Iw1t+lvxDq1fZymo4nZoAB779xUg4WlTW
+         kbvp3UBCLIMGNBPNf3DJ40G6BPt3cND3ot64dBtelxMoATdXE5TsJqwDmFUa1bLknvgU
+         cZok4F5J7LdZ9mDLQ9Ny9NVqZDcBelLlbgtdrtMkHXYYf/Wfe0Vd624jsdprgFPm+vO1
+         B49g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:reply-to:subject:message-id:mime-version:from:date
+         :content-transfer-encoding:dkim-signature:dkim-signature;
+        bh=gJhQcrrNjc7CYYxtHOD1HbJGDkFEMOUcYTZX0JgENjo=;
+        fh=Ci0iq4Ac4DytaxUeVWwBMQDdBZkORv0c8+JLodrr/+k=;
+        b=hteXlOD2jgzvD8kQH002HRFlkA2j/3uMsGmUo6Azw02K59wte/Q18KdhUFz8h0pBvh
+         DvzlHgvqJw+qaQxweB0HeTsMWl2N9X0fY/e6JFE62saCu3IvFkd05XkliAzV0utfdMgx
+         HIGP2xFuoIQa6v3R/9clHA8R/Dg0h3JyveEUVwHfCOJGn0OA0UaX42TmH57UGF0qDlmc
+         tSx65uXdrIYSCKfk9wxdkj79+qDMkZWxcErSHjP54Fw4Ks7HAQkHOjzTX8WJYWY8D6w7
+         HbfDkrx7i+mpYjBaPGPoIV8yfb4TKsv/p2swtJxmBQnXbkYCbEYBgjP7/YWyBNc2Mgrh
+         eFhw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@community.nas.io header.s=s1 header.b=AQsaULYT;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=fLNNalmo;
+       spf=pass (google.com: domain of bounces+34218064-68b5-kratikalko522=gmail.com@em6382.community.nas.io designates 149.72.83.253 as permitted sender) smtp.mailfrom="bounces+34218064-68b5-kratikalko522=gmail.com@em6382.community.nas.io";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=nas.io
+Return-Path: <bounces+34218064-68b5-kratikalko522=gmail.com@em6382.community.nas.io>
+Received: from o1.community.nas.io (o1.community.nas.io. [149.72.83.253])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-76bccfe374csi10092362b3a.134.2025.08.04.04.39.07
+        for <kratikalko522@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 04 Aug 2025 04:39:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+34218064-68b5-kratikalko522=gmail.com@em6382.community.nas.io designates 149.72.83.253 as permitted sender) client-ip=149.72.83.253;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@community.nas.io header.s=s1 header.b=AQsaULYT;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=fLNNalmo;
+       spf=pass (google.com: domain of bounces+34218064-68b5-kratikalko522=gmail.com@em6382.community.nas.io designates 149.72.83.253 as permitted sender) smtp.mailfrom="bounces+34218064-68b5-kratikalko522=gmail.com@em6382.community.nas.io";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=nas.io
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=community.nas.io; h=content-transfer-encoding:content-type:date:from:mime-version:subject: reply-to:to:cc:content-type:date:feedback-id:from:subject:to; s=s1; bh=gJhQcrrNjc7CYYxtHOD1HbJGDkFEMOUcYTZX0JgENjo=; b=AQsaULYT0kfnDpK6t38qmkG2Wq1/Ls/ZRgXSD6ZDO+WfO5nVzl1lZu1Hkk+d8pb5QEix q1VMFBtTefyqEPOIkWuiKp352h4ab5xRGGIx11w4s9k3A64HNXTMThr5cyetnhV3SVNVA8 aU4p6qQeYKstHw4QH00IldccLmQSiiRd7XJej+Cxj0/VWxWk8Cj0VAOnleteK/EOSO1B1c ZQ8A9fhIadycKGBo+tKaZjUvHHhB4AgwTu9/DtEFEGZPtmeSMPsYjNnZ29Xn0ldT8daE1Y gV886fpl1lYbqTRLDywz+rcpgkkLQtcgSnQ6hocqO9rOFc6MOoKUZEfMhvwpr7vQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info; h=content-transfer-encoding:content-type:date:from:mime-version:subject: reply-to:to:cc:content-type:date:feedback-id:from:subject:to; s=smtpapi; bh=gJhQcrrNjc7CYYxtHOD1HbJGDkFEMOUcYTZX0JgENjo=; b=fLNNalmoAN5JSwZ02bA7+4zkWPUNaa1k/JsCmxgW1dbiPVDIBxo2n2/pc4KTAzmhMxW7 6pTzPuukY6vKUfa5vCH9CBNkTDV5hGgyw/vp0tgM+KF/BZ/xgNmOsRdMqfOkwodYvIE0pV 3leLO+erBJ29SMC5N36/yXeI08hRCygsk=
+Received: by recvd-84f4c5f6f4-9pb7x with SMTP id recvd-84f4c5f6f4-9pb7x-1-68909BDA-14 2025-08-04 11:39:06.347051609 +0000 UTC m=+5252905.884857491
+Received: from MzQyMTgwNjQ (unknown) by geopod-ismtpd-12 (SG) with HTTP id EyF7gpoFRSuvdUeR7laBbQ Mon, 04 Aug 2025 11:39:06.289 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Date: Mon, 04 Aug 2025 11:39:06 +0000 (UTC)
+From: "Nuseir | Nas Daily Newsletter" <nasdailynewsletter-team@community.nas.io>
+Mime-Version: 1.0
+Message-ID: <EyF7gpoFRSuvdUeR7laBbQ@geopod-ismtpd-12>
+Subject: 71 digital products you could be building
+Reply-To: Nuseir Yassin <no-reply2@nas.io>
+X-SG-EID: u001./xpcJzu7E2S2kAi8h8ocvc+CHrfhJRMFA28CBwE92kYDk6DjnN8FlD65PtqrKMz7Fsskz3lvvqzjo8fL8gK1fvLsyBLPXXseFSaud//nPPKHRXq29nXJdETMWhVfEhf+BZ3/SMLHHjz6+x6LMjxM8O8pinuoaTvzHvSrKzz48k6DUX0swQfPGQnc4Yzg6em65Mb9H81EV+imeBs9SQ373rWmU0UGV4Jv2PB3rRNEnvDTHH5LibMQdsNm52xE14o3/Zy3uoSZ5u2j0AmbiwzXq499rOFiFAp2+g2nQgcQ244=
+X-SG-ID: u001.SdBcvi+Evd/bQef8eZF3BrJZJVKOCSPgTf43dHf/B/9oqK3LNtXX5B3G0Wadj/qiu6sInvdFDLn+uwFA+MNEj4IJJTllKugp4W/yRbpKxft0K8I2ydgtW3AUoH9AeGswq1Td5n335Coczc4iZk+WNril5D4arb72aMxKUc/83ozzsDh2tYgWLoaJkWnaceu4olnLY2jvMSRJ3kKmiuPLcw==
+To: kratikalko522 <kratikalko522@gmail.com>
+X-Entity-ID: u001.zSBSAnlDn3eJhC+BZICivA==
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=3D"UTF-8" />
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+    <!--<![endif]-->
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1">
+    <style type=3D"text/css">
+    #outlook a{padding:0;}body{margin:0;padding:0;-webkit-text-size-adjust:=
+100%;-ms-text-size-adjust:100%;}table,td{border-collapse:collapse;mso-table=
+-lspace:0pt;mso-table-rspace:0pt;}img{border:0;height:auto;line-height:100%=
+;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;}p{displa=
+y:block;margin:0;}
+    </style>
+    <!--[if mso]> <noscript><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:=
+PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscri=
+pt>
+    <![endif]-->
+    <!--[if lte mso 11]>
+    <style type=3D"text/css">
+    .ogf{width:100% !important;}
+    </style>
+    <![endif]-->
+    <style type=3D"text/css">
+    @media only screen and (min-width:599px).xc536{width:536px!important;ma=
+x-width:536px;}.pc100{width:100%!important;max-width:100%;}}
+    </style>
+    <style media=3D"screen and (min-width:599px)">.moz-text-html .xc536{wid=
+th:536px!important;max-width:536px;}.moz-text-html .pc100{width:100%!import=
+ant;max-width:100%;}
+    </style>
+    <style type=3D"text/css">
+    @media only screen and (max-width:599px)table.fwm{width:100%!important;=
+}td.fwm{width:auto!important;}}noinput.mn-checkbox{display:block!important;=
+max-height:none!important;visibility:visible!important;}
+    @media only screen and (max-width:599px).mn-checkbox[type=3D"checkbox"]=
+~.il{display:none!important;}.mn-checkbox[type=3D"checkbox"]:checked~.il,.m=
+n-checkbox[type=3D"checkbox"]~.mn-trigger{display:block!important;max-width=
+:none!important;max-height:none!important;font-size:inherit!important;}.mn-=
+checkbox[type=3D"checkbox"]~.il>a{display:block!important;}.mn-checkbox[typ=
+e=3D"checkbox"]:checked~.mn-trigger .mn-icon-close{display:block!important;=
+}.mn-checkbox[type=3D"checkbox"]:checked~.mn-trigger .mn-icon-open{display:=
+none!important;}}
+    </style>
+    <style type=3D"text/css">
+    u+.nas-io-magic-reach-mail .gs{background:#000;mix-blend-mode:screen;di=
+splay:inline-block;padding:0;margin:0;}u+.nas-io-magic-reach-mail .gd{backg=
+round:#000;mix-blend-mode:difference;display:inline-block;padding:0;margin:=
+0;}u+.nas-io-magic-reach-mail a,#MessageViewBody a,a[x-apple-data-detectors=
+]{color:inherit!important;text-decoration:none!important;font-size:inherit!=
+important;font-family:inherit!important;font-weight:inherit!important;line-=
+height:inherit!important;}span.MsoHyperlink{mso-style-priority:99;color:inh=
+erit;}span.MsoHyperlinkFollowed{mso-style-priority:99;color:inherit;}td.b .=
+klaviyo-image-block{display:inline;vertical-align:middle;}
+    @media only screen and (max-width:599px).nas-io-magic-reach-mail{height=
+:100%!important;margin:0!important;padding:0!important;width:100%!important=
+;}u+.nas-io-magic-reach-mail .glist{margin-left:1em!important;}td.ico.v>div=
+.il>a.l.m,td.ico.v .mn-label{padding-right:0!important;padding-bottom:16px!=
+important;}td.x{padding-left:0!important;padding-right:0!important;}.fwm im=
+g{max-width:100%!important;height:auto!important;}.aw img{width:auto!import=
+ant;margin-left:auto!important;margin-right:auto!important;}.ah img{height:=
+auto!important;}td.b.nw>table,td.b.nw a{width:auto!important;}td.stk{border=
+:0!important;}td.u{height:auto!important;}br.sb{display:none!important;}.th=
+d-1 .i-thumbnail{display:inline-block!important;height:auto!important;overf=
+low:hidden!important;}.hd-1{display:block!important;height:auto!important;o=
+verflow:visible!important;}.ht-1{display:table!important;height:auto!import=
+ant;overflow:visible!important;}.hr-1{display:table-row!important;height:au=
+to!important;overflow:visible!important;}.hc-1{display:table-cell!important=
+;height:auto!important;overflow:visible!important;}div.r.pr-32>table>tbody>=
+tr>td,div.r.pr-32>div>table>tbody>tr>td{padding-right:32px!important}div.r.=
+pl-32>table>tbody>tr>td,div.r.pl-32>div>table>tbody>tr>td{padding-left:32px=
+!important}td.x.fs-28 span,td.x.fs-28>div,td.x.fs-28{font-size:28px!importa=
+nt}div.r.pr-40>table>tbody>tr>td,div.r.pr-40>div>table>tbody>tr>td{padding-=
+right:40px!important}div.r.pl-40>table>tbody>tr>td,div.r.pl-40>div>table>tb=
+ody>tr>td{padding-left:40px!important}td.b.fw-1>table{width:100%!important}=
+td.fw-1>table>tbody>tr>td>a{display:block!important;width:100%!important;pa=
+dding-left:0!important;padding-right:0!important;}td.b.fw-1>table{width:100=
+%!important}td.fw-1>table>tbody>tr>td{width:100%!important;padding-left:0!i=
+mportant;padding-right:0!important;}td.v.s-8>div.il>a.l.m{padding-right:8px=
+!important;}td.v.ico.s-8>div.il>a.l.m,td.v.ico.s-8 .mn-label{padding-bottom=
+:8px!important;padding-right:0!important;}}
+    </style>
+    <meta name=3D"color-scheme" content=3D"light dark">
+    <meta name=3D"supported-color-schemes" content=3D"light dark">
+    <!--[if gte mso 9]>
+    <style>li{text-indent:-1em;}
+    </style>
+    <![endif]-->
+    <!--[if mso]><!-- -->
+    <style>.cr->table>tbody>tr>td,.c-r>table{border-collapse:collapse;}
+    </style>
+    <!--<![endif]-->
+
+       =20
+    <style type=3D"text/css">
+       .product-template .entity-image {
+            width: 100%;
+            max-width: 128px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+       =20
+        .product-template .entity-details {
+            display: inline-flex;
+            margin-left: 8px;
+            }
+            .product-template .entity-first-column {
+                display: inline-block;
+        }
+       =20
+        /* Media query for desktop */
+        @media screen and (min-width: 500px)=20
+/*                  .product-template  .entity-name {*/
+/*                          max-height: 21px;*/
+/*-webkit-line-clamp: 1;*/
+/*        }*/
+       =20
+          .product-template  .entity-image {
+                width: 128px;
+                margin-right: 16px;
+                margin-bottom: 0;
+            }
+           .product-template .entity-details {
+                flex-grow: 1;
+            }
+            .product-template .entity-first-column {
+                display: flex;
+                align-items: center;
+        }
+       =20
+        }
+    </style>
+  </head>
+ =20
+  <body link=3D"#DD0000" vlink=3D"#DD0000" class=3D"nas-io-magic-reach-mail=
+"
+    style=3D"mso-line-height-rule:exactly;word-spacing:normal;background-co=
+lor:#fffffe !important;">
+    <div style=3D"display:none;">Hey kratikalko522,  Most people don=E2=80=
+=99t start a business because they think they don=E2=80=99t have an idea.  =
+ So we asked our AI Cofounder: =E2=80=9CWhat could I sell if I=E2=80=99m a =
+[mom/coach/professional/student]?=E2=80=9D   Here=E2=80=99s what it came up=
+ with, 71 real products, services, and challenges that people are already l=
+aunching on Nas.io:=C2=A0 ...</div>
+    <div class=3D"bg" style=3D"background-color:#fffffe !important;">
+      <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"r-outlook -outlook pr-32-outlook pl-32-outlook -outlook" role=3D"non=
+e" style=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height:0;font=
+-size:0;mso-line-height-rule:exactly;">
+<![endif]-->
+      <div class=3D"r  pr-32 pl-32"
+          style=3D"background:#fffffe;background-color:#fffffe;margin:0px a=
+uto;max-width:600px;">
+          <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" role=3D"none"
+              style=3D"background:#fffffe;background-color:#fffffe;width:10=
+0%;">
+              <tbody>
+                  <tr>
+                      <td style=3D"border:none;direction:ltr;font-size:0;pa=
+dding:12px 32px 12px 32px;text-align:left;">
+                          <!--[if mso | IE]>
+<table role=3D"none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><=
+td class=3D"c-outlook -outlook -outlook" style=3D"vertical-align:middle;wid=
+th:536px;">
+<![endif]-->
+                          <div class=3D"xc536 ogf c"
+                              style=3D"font-size:0;text-align:left;directio=
+n:ltr;display:inline-block;vertical-align:middle;width:100%;">
+                              <a href=3D"https://url2344.community.nas.io/l=
+s/click?upn=3Du001.3bvFmuGshLO4fT-2BFpxxTQrDDw0ACA-2FJqxI2FiicJp0pqdWaZ9mUV=
+ybfRastTbJnNB5Cm_BhaiuQ3L8BylGsjSQfEyeHHoz7nrzi7FUkhO8KXJuFALpi3xW7Z2IC0VJl=
+jGGiu3STj2vH5yth3ih-2Fgrftmu9wj9oWmzXkqAsQCwLTUjWWJ-2BAtwx2czDzQ-2BUzHtrE0T=
+XC5tLPZi2M3r0um-2FnF69UkiZj5nZVe7HW70-2F5gHzgZbUQkWQUDhe4DwwgZhq6bTvpCkUusi=
+pzAy7NyQbXnHv-2B-2FetsNVe0aDUVcS8V-2FJJSSlev0qo93EBgbv55qghbPn-2FdACou3ZCdH=
+-2F0xRQ8tyHhCcMMQgBXCx0dLf9JNSMhj0XaJmno1ubHs8FDDdasqiGjmbX4qOdUY-2B1-2F0kJ=
+w-2Fp4aOov54dRv4cI9-2Bo1gi6n-2FBPNPudc8zgtmA7B24SZLUb4BYeXcG-2F9zQ81h1WH43i=
+FQsNw-3D-3D" target=3D"_blank" style=3D"decoration:none;text-decoration:non=
+e;color:inherit;">
+                              <table border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" role=3D"none"
+                                  style=3D"border:none;vertical-align:middl=
+e;" width=3D"100%">
+                                  <tbody>
+                                      <tr>
+                                          <td align=3D"left" class=3D"a"
+                                              style=3D"background:transpare=
+nt;font-size:0;padding:0;word-break:break-word;">
+                                              <table cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%" border=3D"0"
+                                                  style=3D"color:#000000;fo=
+nt-family:Arial,sans-serif;font-size:13px;line-height:22px;table-layout:fix=
+ed;width:100%;border:none;">
+                                                  <tr class=3D"q ">
+                                                      <td align=3D"left" cl=
+ass=3D"u"
+                                                          style=3D"padding:=
+0;height:40px;word-wrap:break-word;vertical-align:middle;"
+                                                          width=3D"40">
+                                                          <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0"
+                                                              width=3D"100%=
+">
+                                                              <tr>
+                                                                  <td class=
+=3D"i  " align=3D"left" width=3D"100%"><img
+                                                                          w=
+idth=3D"40" height=3D"auto"
+                                                                          s=
+tyle=3D"display:block;width:40px;height:40px;border-radius:8px;"
+                                                                          s=
+rc=3D"https://d2oi1rqwb0pj00.cloudfront.net/nasIO/community-product-page/na=
+sdailynewsletter/production/1687275954125-298410026_616413043189705_6858960=
+848533802803_n-jpeg">
+                                                                  </td>
+                                                              </tr>
+                                                          </table>
+                                                      </td>
+                                                      <td class=3D"tgtr"
+                                                          style=3D"vertical=
+-align:middle;color:transparent;font-size:0;"
+                                                          width=3D"12">
+                                                      </td>
+                                                      <td align=3D"left" cl=
+ass=3D"u"
+                                                          style=3D"padding:=
+0;height:17px;word-wrap:break-word;vertical-align:middle;"
+                                                          width=3D"auto">
+                                                          <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0"
+                                                              width=3D"100%=
+">
+                                                              <tr>
+                                                                  <td class=
+=3D"x  " align=3D"left" width=3D"100%">
+                                                                      <p st=
+yle=3D"Margin:0;text-align:left;"><span
+                                                                           =
+   style=3D"font-size:14px;font-family:Helvetica,Arial,sans-serif;font-weig=
+ht:700;color:#706f6b;line-height:121%;">Nas Daily Newsletter</span>
+                                                                      </p>
+                                                                  </td>
+                                                              </tr>
+                                                          </table>
+                                                      </td>
+                                                  </tr>
+                                              </table>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                              </a>
+                          </div>
+                          <!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      <!--[if mso | IE]>
+</td></tr></table>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"r-outlook -outlook pr-32-outlook pl-32-outlook -outlook" role=3D"non=
+e" style=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height:0;font=
+-size:0;mso-line-height-rule:exactly;">
+<![endif]-->
+      <div class=3D"r  pr-32 pl-32"
+          style=3D"background:#fffffe;background-color:#fffffe;margin:0px a=
+uto;max-width:600px;">
+          <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" role=3D"none"
+              style=3D"background:#fffffe;background-color:#fffffe;width:10=
+0%;">
+              <tbody>
+                  <tr>
+                      <td style=3D"border:none;direction:ltr;font-size:0;pa=
+dding:24px 32px 8px 32px;text-align:left;">
+                          <!--[if mso | IE]>
+<table role=3D"none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><=
+td class=3D"c-outlook -outlook -outlook" style=3D"vertical-align:middle;wid=
+th:536px;">
+<![endif]-->
+                          <div class=3D"xc536 ogf c"
+                              style=3D"font-size:0;text-align:left;directio=
+n:ltr;display:inline-block;vertical-align:middle;width:100%;">
+                              <table border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" role=3D"none"
+                                  style=3D"border:none;vertical-align:middl=
+e;" width=3D"100%">
+                                  <tbody>
+                                      <tr>
+                                          <td align=3D"left" class=3D"x  m"
+                                              style=3D"font-size:0;padding-=
+bottom:8px;word-break:break-word;">
+                                              <div style=3D"text-align:left=
+;">
+                                                  <p style=3D"Margin:0;text=
+-align:left;mso-line-height-alt:157%"><span
+                                                          style=3D"font-siz=
+e:14px;font-family:Helvetica,Arial,sans-serif;font-weight:400;color:#91918d=
+;line-height:157%;">4 Aug</span>
+                                                  </p>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td align=3D"left" class=3D"x  fs=
+-28"
+                                              style=3D"font-size:0;padding-=
+bottom:0;word-break:break-word;">
+                                              <div style=3D"text-align:left=
+;">
+                                                  <p style=3D"Margin:0;text=
+-align:left;mso-line-height-alt:119%"><span
+                                                          style=3D"font-siz=
+e:32px;font-family:Helvetica,Arial,sans-serif;font-weight:700;color:#1b1b18=
+;line-height:119%;letter-spacing:-1px;">71 digital products you could be bu=
+ilding</span>
+                                                  </p>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      <!--[if mso | IE]>
+</td></tr></table>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"r-outlook -outlook pr-32-outlook pl-32-outlook -outlook" role=3D"non=
+e" style=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height:0;font=
+-size:0;mso-line-height-rule:exactly;">
+<![endif]-->
+      <div class=3D"r  pr-32 pl-32"
+          style=3D"background:#fffffe;background-color:#fffffe;margin:0px a=
+uto;max-width:600px;">
+          <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" role=3D"none"
+              style=3D"background:#fffffe;background-color:#fffffe;width:10=
+0%;">
+              <tbody>
+                  <tr>
+                      <td style=3D"border:none;direction:ltr;font-size:0;pa=
+dding:16px 32px 16px 32px;text-align:left;">
+                          <!--[if mso | IE]>
+<table role=3D"none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><=
+td class=3D"c-outlook -outlook -outlook" style=3D"vertical-align:middle;wid=
+th:536px;">
+<![endif]-->
+                          <div class=3D"xc536 ogf c"
+                              style=3D"font-size:0;text-align:left;directio=
+n:ltr;display:inline-block;vertical-align:middle;width:100%;">
+                              <table border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" role=3D"none"
+                                  style=3D"border:none;vertical-align:middl=
+e;" width=3D"100%">
+                                  <tbody>
+                                      <tr>
+                                          <td align=3D"left" class=3D"a"
+                                              style=3D"background:transpare=
+nt;font-size:0;padding:0;word-break:break-word;">
+                                              <table cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%" border=3D"0"
+                                                  style=3D"color:#000000;fo=
+nt-family:Arial,sans-serif;font-size:13px;line-height:22px;table-layout:fix=
+ed;width:100%;border:none;">
+                                                  <tr class=3D"q ">
+                                                      <td align=3D"right" c=
+lass=3D"u"
+                                                          style=3D"padding:=
+0;height:32px;word-wrap:break-word;vertical-align:middle;"
+                                                          width=3D"32">
+                                                          <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0"
+                                                              width=3D"100%=
+">
+                                                              <tr>
+                                                                  <td class=
+=3D"i  " align=3D"right" width=3D"100%"><img
+                                                                          w=
+idth=3D"32" height=3D"auto"
+                                                                          s=
+tyle=3D"display:block;width:32px;height:32px;border-radius:50%;"
+                                                                          s=
+rc=3D"https://d2oi1rqwb0pj00.cloudfront.net/user/nio_1753882335901">
+                                                                  </td>
+                                                              </tr>
+                                                          </table>
+                                                      </td>
+                                                      <td class=3D"tgtr"
+                                                          style=3D"vertical=
+-align:middle;color:transparent;font-size:0;"
+                                                          width=3D"12">
+                                                      </td>
+                                                      <td align=3D"left" cl=
+ass=3D"u"
+                                                          style=3D"padding:=
+0;height:22px;word-wrap:break-word;vertical-align:middle;"
+                                                          width=3D"auto">
+                                                          <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0"
+                                                              width=3D"100%=
+">
+                                                              <tr>
+                                                                  <td class=
+=3D"x  " align=3D"left" width=3D"100%">
+                                                                      <p st=
+yle=3D"Margin:0;text-align:left;"><span
+                                                                           =
+   style=3D"font-size:14px;font-family:Helvetica,Arial,sans-serif;font-weig=
+ht:400;color:#1b1b18;line-height:157%;">Nuseir Yassin</span>
+                                                                      </p>
+                                                                  </td>
+                                                              </tr>
+                                                          </table>
+                                                      </td>
+                                                  </tr>
+                                              </table>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      <!--[if mso | IE]>
+</td></tr></table>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"" role=3D"none" style=3D"width:600px;background-color: #fffffe;" wid=
+th=3D"600"><tr><td style=3D"line-height:0;font-size:0;mso-line-height-rule:=
+exactly;">
+<![endif]-->
+      <div class=3D"" style=3D"margin:0px auto;max-width:600px; background-=
+color: #fffffe;">
+          <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" role=3D"none" style=3D"width:100%;">
+              <tbody>
+                  <tr>
+                      <td style=3D"direction:ltr;font-size:0;padding:0;text=
+-align:center;">
+                          <!--[if mso | IE]>
+<table role=3D"none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><=
+td class=3D"" style=3D"vertical-align:top;width:600px;">
+<![endif]-->
+                          <div class=3D"pc100 ogf"
+                              style=3D"font-size:0;text-align:left;directio=
+n:ltr;display:inline-block;vertical-align:top;width:100%;">
+                              <table border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" role=3D"none" width=3D"100%">
+                                  <tbody>
+                                      <tr>
+                                          <td style=3D"vertical-align:top;p=
+adding:0;">
+                                              <table border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" role=3D"none"
+                                                  width=3D"100%">
+                                                  <tbody>
+                                                      <tr>
+                                                          <td align=3D"left=
+" class=3D"i"
+                                                              style=3D"font=
+-size:0;padding:0;word-break:break-word;">
+                                                              <table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+                                                                  role=3D"n=
+one"
+                                                                  style=3D"=
+border-collapse:collapse;border-spacing:0;">
+                                                                  <tbody>
+                                                                      <tr>
+                                                                          <=
+td style=3D"width:600px; border-top:1 solid #E2E2DF">
+                                                                          <=
+/td>
+                                                                      </tr>
+                                                                  </tbody>
+                                                              </table>
+                                                          </td>
+                                                      </tr>
+                                                  </tbody>
+                                              </table>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+   =20
+          <!--[if mso | IE]>
+  </td></tr></table>
+  <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"" role=3D"none" style=3D"width:600px; background-color: #fffffe;" =
+width=3D"600"><tr><td style=3D"line-height:0;font-size:0;mso-line-height-ru=
+le:exactly;">
+  <![endif]-->
+          <div class=3D"" style=3D"margin:0px auto;max-width:600px;backgrou=
+nd-color: #fffffe;">
+              <table align=3D"center" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"none" style=3D"width:100%;">
+                  <tbody>
+                      <tr>
+                          <td style=3D"direction:ltr;font-size:0;padding:0;=
+text-align:center;">
+                              <!--[if mso | IE]>
+  <table role=3D"none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr=
+><td class=3D"" style=3D"vertical-align:top;width:600px;">
+  <![endif]-->
+                              <div class=3D"pc100 ogf"
+                                  style=3D"font-size:0;text-align:left;dire=
+ction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                  <table border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" role=3D"none" width=3D"100%">
+                                      <tbody>
+                                          <tr>
+                                              <td style=3D"vertical-align:t=
+op;padding:0;">
+                                                  <table border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" role=3D"none"
+                                                      width=3D"100%">
+                                                      <tbody>
+                                                          <tr>
+                                                              <td align=3D"=
+center" class=3D"i"
+                                                                  style=3D"=
+font-size:0;padding:0;word-break:break-word;">
+                                                                  <table bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+                                                                      role=
+=3D"none"
+                                                                      style=
+=3D"border-collapse:collapse;border-spacing:0;">
+                                                                      <tbod=
+y>
+                                                                          <=
+tr>
+                                                                           =
+   <td style=3D"width:536px;"><hr style=3D"border-top: 1px solid #E2E2DF;"/=
+>
+                                                                           =
+   </td>
+                                                                          <=
+/tr>
+                                                                      </tbo=
+dy>
+                                                                  </table>
+                                                              </td>
+                                                          </tr>
+                                                      </tbody>
+                                                  </table>
+                                              </td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                              <!--[if mso | IE]>
+  </td></tr></table>
+  <![endif]-->
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+        <section style=3D"margin:24px auto; max-width:600px;padding:0 32px"=
+><p style=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-he=
+ight: 160%;color: #1B1B18;margin:0; text-align: left;"><span>Hey </span><sp=
+an>kratikalko522</span><span>,</span></p><p style=3D"font-family:Helvetica,=
+Arial,sans-serif;font-size: 16px;line-height: 160%;color: #1B1B18;margin:0;=
+height:24px; text-align: left;"><span style=3D"margin-top:24px"></span></p>=
+<p style=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-hei=
+ght: 160%;color: #1B1B18;margin:0; text-align: left;"><span>Most people don=
+=E2=80=99t start a business because they think they </span><span><em>don=E2=
+=80=99t have an idea</em></span><span>.</span></p><p style=3D"font-family:H=
+elvetica,Arial,sans-serif;font-size: 16px;line-height: 160%;color: #1B1B18;=
+margin:0; text-align: left;"><br/><span> So we asked our AI Cofounder:</spa=
+n><br/><span><strong><em>=E2=80=9CWhat could I sell if I=E2=80=99m a [mom/c=
+oach/professional/student]?=E2=80=9D</em></strong></span></p><div style=3D"=
+text-align: center;"><img src=3D"https://d2oi1rqwb0pj00.cloudfront.net/nasI=
+O/portal/email-images/6491c83261936750a998520d/magicReach/688b553b5fb2a98f6=
+a49abfe/common/nio_1753961888043_da37bb8b-53bb-45e6-af34-bef0b0f6550d_GV" a=
+ltText=3D"31e82233-5744-46af-96e7-cc447f2f0377.gif" style=3D"margin: 12px 0=
+px; border-radius:12px; max-width: 100%; width: 100%;" /></div><p style=3D"=
+font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-height: 160%;co=
+lor: #1B1B18;margin:0;height:24px; text-align: left;"><span style=3D"margin=
+-top:24px"></span></p><p style=3D"font-family:Helvetica,Arial,sans-serif;fo=
+nt-size: 16px;line-height: 160%;color: #1B1B18;margin:0; text-align: left;"=
+><span>Here=E2=80=99s what it came up with, 71 real products, services, and=
+ challenges that people are already launching on Nas.io:=C2=A0</span></p><p=
+ style=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-heigh=
+t: 160%;color: #1B1B18;margin:0;height:24px; text-align: left;"><span style=
+=3D"margin-top:24px"></span></p><p style=3D"font-family:Helvetica,Arial,san=
+s-serif;font-size: 20px; color: #1B1B18; font-weight: 700; line-height: 26p=
+x;margin:0; text-align: left;"><span>=F0=9F=91=A9=F0=9F=92=BC Professionals=
+</span></p><p style=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16=
+px;line-height: 160%;color: #1B1B18;margin:0; text-align: left;"><span> 1. =
+Resume review service</span></p><p style=3D"font-family:Helvetica,Arial,san=
+s-serif;font-size: 16px;line-height: 160%;color: #1B1B18;margin:0; text-ali=
+gn: left;"><span> 2. Salary negotiation masterclass</span></p><p style=3D"f=
+ont-family:Helvetica,Arial,sans-serif;font-size: 16px;line-height: 160%;col=
+or: #1B1B18;margin:0; text-align: left;"><span> 3. Excel for marketers cras=
+h course</span></p><p style=3D"font-family:Helvetica,Arial,sans-serif;font-=
+size: 16px;line-height: 160%;color: #1B1B18;margin:0; text-align: left;"><s=
+pan> 4. Project management playbook</span></p><p style=3D"font-family:Helve=
+tica,Arial,sans-serif;font-size: 16px;line-height: 160%;color: #1B1B18;marg=
+in:0; text-align: left;"><span> 5. LinkedIn profile templates</span></p><p =
+style=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-height=
+: 160%;color: #1B1B18;margin:0; text-align: left;"><span> 6. =E2=80=9COffic=
+e Politics 101=E2=80=9D micro-course</span></p><p style=3D"font-family:Helv=
+etica,Arial,sans-serif;font-size: 16px;line-height: 160%;color: #1B1B18;mar=
+gin:0; text-align: left;"><span> 7. 14-day challenge to build your personal=
+ brand</span></p><p style=3D"font-family:Helvetica,Arial,sans-serif;font-si=
+ze: 16px;line-height: 160%;color: #1B1B18;margin:0; text-align: left;"><spa=
+n>8. 1:1 career coaching calls</span></p><p style=3D"font-family:Helvetica,=
+Arial,sans-serif;font-size: 16px;line-height: 160%;color: #1B1B18;margin:0;=
+ text-align: left;"><span> 9. Notion template for team performance reviews<=
+/span></p><p style=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16p=
+x;line-height: 160%;color: #1B1B18;margin:0; text-align: left;"><span> 10. =
+How to quit your job </span><span><em>(without going broke) </em></span><sp=
+an>PDF</span></p><p style=3D"font-family:Helvetica,Arial,sans-serif;font-si=
+ze: 20px; color: #1B1B18; font-weight: 700; line-height: 26px;margin:0; tex=
+t-align: left;"><br/></p><p style=3D"font-family:Helvetica,Arial,sans-serif=
+;font-size: 20px; color: #1B1B18; font-weight: 700; line-height: 26px;margi=
+n:0; text-align: left;"><span>=F0=9F=91=A9 Moms</span></p><p style=3D"font-=
+family:Helvetica,Arial,sans-serif;font-size: 16px;line-height: 160%;color: =
+#1B1B18;margin:0; text-align: left;"><span> 11. 30-day home organization ch=
+allenge</span><br/><span> 12. Sleep training audio course</span><br/><span>=
+ 13. Meal prep plan for picky toddlers</span><br/><span> 14. Digital recipe=
+ binder (Canva/Notion)</span><br/><span> 15. Co-parenting weekly planner</s=
+pan><br/><span> 16. 14-day self-care challenge</span><br/><span> 17. Daily =
+mom motivation SMS club</span><br/><span> 18. Time-blocking system for moms=
+ (template + walkthrough)</span><br/><span> 19. Kids=E2=80=99 birthday part=
+y planning kit</span><br/><span> 20. 1:1 parenting coaching</span></p><p st=
+yle=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-height: =
+160%;color: #1B1B18;margin:0;height:24px; text-align: left;"><span style=3D=
+"margin-top:24px"></span></p><p style=3D"font-family:Helvetica,Arial,sans-s=
+erif;font-size: 20px; color: #1B1B18; font-weight: 700; line-height: 26px;m=
+argin:0; text-align: left;"><span>=F0=9F=8E=93 College Students</span></p><=
+p style=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-heig=
+ht: 160%;color: #1B1B18;margin:0; text-align: left;"><span> 21. Study-with-=
+me Zoom sessions</span><br/><span> 22. Essay writing templates + live revie=
+ws</span><br/><span> 23. =E2=80=9CFirst internship=E2=80=9D prep challenge<=
+/span><br/><span> 24. 14-day money-saving challenge</span><br/><span> 25. R=
+esume pack + personal feedback</span><br/><span> 26. Weekly online networki=
+ng mixer</span><br/><span> 27. AI tools for studying + walkthrough</span><b=
+r/><span> 28. Group chat for international students</span><br/><span> 29. D=
+igital habit tracker (Notion)</span><br/><span> 30. Digital side hustle sta=
+rter pack</span></p><p style=3D"font-family:Helvetica,Arial,sans-serif;font=
+-size: 16px;line-height: 160%;color: #1B1B18;margin:0;height:24px; text-ali=
+gn: left;"><span style=3D"margin-top:24px"></span></p><p style=3D"font-fami=
+ly:Helvetica,Arial,sans-serif;font-size: 20px; color: #1B1B18; font-weight:=
+ 700; line-height: 26px;margin:0; text-align: left;"><span>=F0=9F=92=AA Fit=
+ness Gurus</span></p><p style=3D"font-family:Helvetica,Arial,sans-serif;fon=
+t-size: 16px;line-height: 160%;color: #1B1B18;margin:0; text-align: left;">=
+<span> 31. 30-day Summer Body Challenge</span><br/><span> 32. 4-week home w=
+orkout plan (PDF + videos)</span><br/><span> 33. Macro calculator (Google S=
+heet)</span><br/><span> 34. Gym starter pack + beginner=E2=80=99s guide</sp=
+an><br/><span> 35. Daily fitness SMS challenge</span><br/><span> 36. =E2=80=
+=9CTrain with me=E2=80=9D live workouts (Zoom)</span><br/><span> 37. Form c=
+heck group for women</span><br/><span> 38. 1:1 online personal training</sp=
+an><br/><span> 39. Nutrition plan + shopping list template</span><br/><span=
+> 40. 30-day discipline challenge</span></p><p style=3D"font-family:Helveti=
+ca,Arial,sans-serif;font-size: 16px;line-height: 160%;color: #1B1B18;margin=
+:0;height:24px; text-align: left;"><span style=3D"margin-top:24px"></span><=
+/p><p style=3D"font-family:Helvetica,Arial,sans-serif;font-size: 20px; colo=
+r: #1B1B18; font-weight: 700; line-height: 26px;margin:0; text-align: left;=
+"><span>=F0=9F=8E=A4 Coaches</span></p><p style=3D"font-family:Helvetica,Ar=
+ial,sans-serif;font-size: 16px;line-height: 160%;color: #1B1B18;margin:0; t=
+ext-align: left;"><span> 41. Discovery call script + funnel</span></p><p st=
+yle=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-height: =
+160%;color: #1B1B18;margin:0; text-align: left;"><span> 42. 5-day bootcamp:=
+ Get Your First 5 Clients</span></p><p style=3D"font-family:Helvetica,Arial=
+,sans-serif;font-size: 16px;line-height: 160%;color: #1B1B18;margin:0; text=
+-align: left;"><span> 43. Weekly mindset reset Zoom call</span></p><p style=
+=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-height: 160=
+%;color: #1B1B18;margin:0; text-align: left;"><span> 44. Signature system d=
+igital mini-course</span></p><p style=3D"font-family:Helvetica,Arial,sans-s=
+erif;font-size: 16px;line-height: 160%;color: #1B1B18;margin:0; text-align:=
+ left;"><span> 45. Swipe file: onboarding + welcome emails</span></p><p sty=
+le=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-height: 1=
+60%;color: #1B1B18;margin:0; text-align: left;"><span> 46. 1:1 business coa=
+ching</span></p><p style=3D"font-family:Helvetica,Arial,sans-serif;font-siz=
+e: 16px;line-height: 160%;color: #1B1B18;margin:0; text-align: left;"><span=
+> 47. Accountability pod membership</span></p><p style=3D"font-family:Helve=
+tica,Arial,sans-serif;font-size: 16px;line-height: 160%;color: #1B1B18;marg=
+in:0; text-align: left;"><span> 48. Group coaching calendar system</span></=
+p><p style=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-h=
+eight: 160%;color: #1B1B18;margin:0; text-align: left;"><span> 49. Live wee=
+kend intensive workshop</span></p><p style=3D"font-family:Helvetica,Arial,s=
+ans-serif;font-size: 16px;line-height: 160%;color: #1B1B18;margin:0; text-a=
+lign: left;"><span> 50. Client showcase template + script</span></p><p styl=
+e=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-height: 16=
+0%;color: #1B1B18;margin:0;height:24px; text-align: left;"><span style=3D"m=
+argin-top:24px"></span></p><p style=3D"font-family:Helvetica,Arial,sans-ser=
+if;font-size: 20px; color: #1B1B18; font-weight: 700; line-height: 26px;mar=
+gin:0; text-align: left;"><span>=F0=9F=8E=A8 Creators</span></p><p style=3D=
+"font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-height: 160%;c=
+olor: #1B1B18;margin:0; text-align: left;"><span> 51. Reels hook starter pa=
+ck</span><br/><span> 52. Notion content calendar</span><br/><span> 53. =E2=
+=80=9CHow I post daily=E2=80=9D behind-the-scenes course</span><br/><span> =
+54. 30 viral caption templates</span><br/><span> 55. Storytelling prompt ge=
+nerator</span><br/><span> 56. Digital product funnel template</span><br/><s=
+pan> 57. Creator burnout toolkit</span><br/><span> 58. 1:1 content strategy=
+ consultation</span><br/><span> 59. Online =E2=80=9CLaunch Your Brand=E2=80=
+=9D weekend workshop</span><br/><span> 60. Video editing services for creat=
+ors</span></p><p style=3D"font-family:Helvetica,Arial,sans-serif;font-size:=
+ 16px;line-height: 160%;color: #1B1B18;margin:0; text-align: left;"><span>=
+=C2=A0</span></p><p style=3D"font-family:Helvetica,Arial,sans-serif;font-si=
+ze: 20px; color: #1B1B18; font-weight: 700; line-height: 26px;margin:0; tex=
+t-align: left;"><span>=E2=9C=8D=EF=B8=8F General</span></p><p style=3D"font=
+-family:Helvetica,Arial,sans-serif;font-size: 16px;line-height: 160%;color:=
+ #1B1B18;margin:0; text-align: left;"><span> 61. AI prompt pack for busines=
+s</span><br/><span> 62. Language learning accountability challenge</span><b=
+r/><span> 63. Monthly live Q&A with your community</span><br/><span> 64. Di=
+gital declutter 7-day challenge</span><br/><span> 65. =E2=80=9CHow I saved =
+$10k=E2=80=9D 14-day challenge</span><br/><span> 66. Feedback circle for fr=
+eelancers</span><br/><span> 67. Side hustle accountability community</span>=
+<br/><span> 68. 30-day no-excuse action plan</span><br/><span> 69. Daily pr=
+oductivity SMS subscription</span><br/><span> 70. Event: In-person mastermi=
+nd weekend</span><br/><span> 71. Digital product builder club (weekly sprin=
+ts)</span></p><p style=3D"font-family:Helvetica,Arial,sans-serif;font-size:=
+ 16px;line-height: 160%;color: #1B1B18;margin:0;height:24px; text-align: le=
+ft;"><span style=3D"margin-top:24px"></span></p><p style=3D"font-family:Hel=
+vetica,Arial,sans-serif;font-size: 16px;line-height: 160%;color: #1B1B18;ma=
+rgin:0; text-align: left;"><span>You don=E2=80=99t need all 71.</span><br/>=
+<span>You just need </span><span><strong>one</strong></span><span> to start=
+.</span></p><p style=3D"font-family:Helvetica,Arial,sans-serif;font-size: 1=
+6px;line-height: 160%;color: #1B1B18;margin:0;height:24px; text-align: left=
+;"><span style=3D"margin-top:24px"></span></p><p style=3D"font-family:Helve=
+tica,Arial,sans-serif;font-size: 16px;line-height: 160%;color: #1B1B18;marg=
+in:0; text-align: left;"><span>The hardest part used to be execution.</span=
+><br/><span><strong>Now? Nas.io=E2=80=99s AI Cofounder does the heavy lifti=
+ng.</strong></span><br/><span> =E2=9C=85 Build your product</span><br/><spa=
+n> =E2=9C=85 Design your landing page</span><br/><span> =E2=9C=85 Find your=
+ first customer</span></p><p style=3D"font-family:Helvetica,Arial,sans-seri=
+f;font-size: 16px;line-height: 160%;color: #1B1B18;margin:0; text-align: le=
+ft;"><span><strong>You bring the idea. Nas.io brings the revenue.</strong><=
+/span></p><p style=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16p=
+x;line-height: 160%;color: #1B1B18;margin:0;height:24px; text-align: left;"=
+><span style=3D"margin-top:24px"></span></p><p style=3D"font-family:Helveti=
+ca,Arial,sans-serif;font-size: 16px;line-height: 160%;color: #1B1B18;margin=
+:0; text-align: left;"><span>Try Nas.io now and launch your first product i=
+n minutes</span></p><!--[if mso | IE]>
+    <table role=3D"none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><=
+tr><td class=3D"c-outlook -outlook -outlook" style=3D"vertical-align:middle=
+;width:536px;">
+    <![endif]-->
+    <div=20
+      style=3D"font-size:0;text-align:left;direction:ltr;display:inline-blo=
+ck;vertical-align:middle;width:100%;margin: 12px 0px">
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"none"
+          style=3D"border:none;vertical-align:middle;" width=3D"100%">
+          <tbody>
+              <tr>
+                  <td align=3D"center" vertical-align=3D"middle" class=3D"b=
+  fw-1"
+                      style=3D"font-size:0;padding:0;word-break:break-word;=
+">
+                      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" role=3D"none"
+                          style=3D"border-collapse:separate;line-height:100=
+%;">
+                          <tbody>
+                              <tr>
+                                  <td align=3D"center" bgcolor=3D"#fccb1d" =
+role=3D"none"
+                                      style=3D"border:none;border-radius:60=
+px 60px 60px 60px;cursor:auto;mso-padding-alt:12px 0px 12px 0px;padding:12p=
+x;background:#fccb1d;"
+                                      valign=3D"middle"> <a href=3D"https:/=
+/url2344.community.nas.io/ls/click?upn=3Du001.3bvFmuGshLO4fT-2BFpxxTQmjksgi=
+HFbmB3QlyhgoHpm6UbXS-2FpuL3xcrcLlXVjURKVlwHnuzuvTsfi8rshVvhiB-2FZah-2Bdrh-2=
+Bv0u5SRa2dD5OVNUAv9EqAMOk5PbbTAcr1uHfifFE5Io78AzoSJL58Zg-3D-3D9dyd_BhaiuQ3L=
+8BylGsjSQfEyeHHoz7nrzi7FUkhO8KXJuFALpi3xW7Z2IC0VJljGGiu3STj2vH5yth3ih-2Fgrf=
+tmu9wj9oWmzXkqAsQCwLTUjWWJ-2BAtwx2czDzQ-2BUzHtrE0TXC5tLPZi2M3r0um-2FnF69Uki=
+Zj5nZVe7HW70-2F5gHzgZbUQkWQUDhe4DwwgZhq6bTvpCx5ShtsJX9yVE7jccPg417upUabAqQK=
+MGOl2JB6PTZUHU67mB6Oope0nyN65p5dWAEcb8hZ8cmjbCEhBx215iP61VrNUPEqJuXSsJtQpp7=
+XzsQau8z3CSXSvmdAViFW0cjqvdfKIjioBqenIKqCLBHueITq2ixhksJwPDW98aT-2BHow6-2Fp=
+EZLhkj1V4iVAN1aLrutIY6ErZn87c96iHFROg-3D-3D"
+                                          style=3D"display:inline-block;bac=
+kground:#fccb1d;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-s=
+ize:13px;font-weight:normal;line-height:100%;margin:0;text-decoration:none;=
+text-transform:none;mso-padding-alt:0;border-radius:60px 60px 60px 60px;"
+                                          target=3D"_blank"> <span
+                                              style=3D"font-size:16px;font-=
+family:Helvetica,Arial,sans-serif;font-weight:700;color:#1b1b18;line-height=
+:119%;">Bring my idea to life</span></a></td></tr></tbody></table></td></tr=
+></tbody></table></div><!--[if mso | IE]></td></tr></table><![endif]--><p s=
+tyle=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-height:=
+ 160%;color: #1B1B18;margin:0;height:24px; text-align: left;"><span style=
+=3D"margin-top:24px"></span></p><p style=3D"font-family:Helvetica,Arial,san=
+s-serif;font-size: 16px;line-height: 160%;color: #1B1B18;margin:0; text-ali=
+gn: left;"><span><strong>Nuseir & Team</strong></span></p>        </section=
+>
+
+        <!--[if mso | IE]>
+</td></tr></table>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"" role=3D"none" style=3D"width:600px; background:#fffffe" width=3D"6=
+00"><tr><td style=3D"line-height:0;font-size:0;mso-line-height-rule:exactly=
+;">
+<![endif]-->
+      =20
+      </div>
+      <footer style=3D"padding: 24px 0; text-align: center;background:#ffff=
+fe">
+      <!--[if mso | IE]>
+      </td></tr></table>
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"r-outlook -outlook pr-32-outlook pl-32-outlook -outlook" role=
+=3D"none" style=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height=
+:0;font-size:0;mso-line-height-rule:exactly;">
+      <![endif]-->
+           =20
+              <!--[if mso | IE]>
+      </td></tr></table>
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"" role=3D"none" style=3D"width:600px;" width=3D"600"><tr><td s=
+tyle=3D"line-height:0;font-size:0;mso-line-height-rule:exactly;">
+      <![endif]-->
+              <div class=3D"" style=3D"margin:0px auto;max-width:600px;">
+                  <table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" role=3D"none" style=3D"width:100%;">
+                      <tbody>
+                          <tr>
+                              <td style=3D"direction:ltr;font-size:0;paddin=
+g:0;text-align:center;">
+                                  <!--[if mso | IE]>
+      <table role=3D"none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+><tr><td class=3D"" style=3D"vertical-align:top;width:600px;">
+      <![endif]-->
+                                  <div class=3D"pc100 ogf"
+                                      style=3D"font-size:0;text-align:left;=
+direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                      <table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"none" width=3D"100%">
+                                          <tbody>
+                                              <tr>
+                                                  <td style=3D"vertical-ali=
+gn:top;padding:0;">
+                                                      <table border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" role=3D"none"
+                                                          width=3D"100%">
+                                                          <tbody>
+                                                              <tr>
+                                                                  <td align=
+=3D"center" class=3D"i"
+                                                                      style=
+=3D"font-size:0;padding:0;word-break:break-word;">
+                                                                      <tabl=
+e border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+                                                                          r=
+ole=3D"none"
+                                                                          s=
+tyle=3D"border-collapse:collapse;border-spacing:0;">
+                                                                          <=
+tbody>
+                                                                           =
+   <tr>
+                                                                           =
+       <td style=3D"width:536px;"><hr style=3D"border-top: 1px solid #E2E2D=
+F;"/>
+                                                                           =
+       </td>
+                                                                           =
+   </tr>
+                                                                          <=
+/tbody>
+                                                                      </tab=
+le>
+                                                                  </td>
+                                                              </tr>
+                                                          </tbody>
+                                                      </table>
+                                                  </td>
+                                              </tr>
+                                          </tbody>
+                                      </table>
+                                  </div>
+                                  <!--[if mso | IE]>
+      </td></tr></table>
+      <![endif]-->
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+              <!--[if mso | IE]>
+      </td></tr></table>
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"r-outlook -outlook pr-32-outlook pl-32-outlook -outlook" role=
+=3D"none" style=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height=
+:0;font-size:0;mso-line-height-rule:exactly;">
+      <![endif]-->
+              <div class=3D"r  pr-32 pl-32"
+                  style=3D"background:#fffffe;background-color:#fffffe;marg=
+in:0px auto;max-width:600px;">
+                  <table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" role=3D"none"
+                      style=3D"background:#fffffe;background-color:#fffffe;=
+width:100%;">
+                      <tbody>
+                          <tr>
+                              <td style=3D"border:none;direction:ltr;font-s=
+ize:0;padding:24px 32px 40px 32px;text-align:left;">
+                                  <!--[if mso | IE]>
+      <table role=3D"none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+><tr><td class=3D"c-outlook -outlook -outlook" style=3D"vertical-align:top;=
+width:536px;">
+      <![endif]-->
+                                  <div class=3D"xc536 ogf c"
+                                      style=3D"font-size:0;text-align:left;=
+direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                      <table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"none"
+                                          style=3D"border:none;vertical-ali=
+gn:top;" width=3D"100%">
+                                          <tbody>
+                                              <tr>
+                                                  <td align=3D"center" clas=
+s=3D"x  m"
+                                                      style=3D"font-size:0;=
+padding-bottom:4px;word-break:break-word;">
+                                                      <div style=3D"text-al=
+ign:center;">
+                                                          <p style=3D"Margi=
+n:0;text-align:center;mso-line-height-alt:117%"><span
+                                                                  style=3D"=
+font-size:12px;font-family:Helvetica,Arial,sans-serif;font-weight:400;color=
+:#91918d;line-height:117%;">Sent
+                                                                  with</spa=
+n></p>
+                                                      </div>
+                                                  </td>
+                                              </tr>
+                                              <tr>
+                                                  <td align=3D"center" clas=
+s=3D"i  m"
+                                                      style=3D"font-size:0;=
+padding:0;padding-bottom:4px;word-break:break-word;">
+                                                      <table border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" role=3D"none"
+                                                          style=3D"border-c=
+ollapse:collapse;border-spacing:0;">
+                                                          <tbody>
+                                                              <tr>
+                                                                  <td style=
+=3D"width:96px;"> <img alt=3D"Nas IO" height=3D"auto"
+                                                                          s=
+rc=3D"https://s3-ap-southeast-1.amazonaws.com/image-assets.nasdaily.com/ema=
+il/png/nasio_logo_light.png"
+                                                                          s=
+tyle=3D"border:0;display:block;outline:none;text-decoration:none;height:aut=
+o;width:100%;font-size:13px;"
+                                                                          t=
+itle=3D"" width=3D"96">
+                                                                  </td>
+                                                              </tr>
+                                                          </tbody>
+                                                      </table>
+                                                  </td>
+                                              </tr>
+                                              <tr>
+                                                  <td class=3D"s  m"
+                                                      style=3D"font-size:0;=
+padding:0;padding-bottom:4px;word-break:break-word;">
+                                                      <div style=3D"height:=
+4px;line-height:4px;">&#8202;</div>
+                                                  </td>
+                                              </tr>
+                                              <tr>
+                                                  <td align=3D"center" clas=
+s=3D"v  s-8"
+                                                      style=3D"font-size:0;=
+padding-bottom:0;word-break:break-word;">
+                                                      <div class=3D"il">
+                                                          <!--[if mso | IE]=
+>
+      <table role=3D"none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ align=3D"center"><tr><td style=3D"padding:0;padding-top:0;padding-left:0;p=
+adding-right:8px;padding-bottom:0;" class=3D"l-outlook -outlook m-outlook">
+      <![endif]--> <a class=3D"l  m" href=3D"https://url2344.community.nas.=
+io/ls/click?upn=3Du001.3bvFmuGshLO4fT-2BFpxxTQoiHcieobS-2FRMWHisKIOQDy5unHm=
+qSmSmPC27df-2F0BvI7vnW_BhaiuQ3L8BylGsjSQfEyeHHoz7nrzi7FUkhO8KXJuFALpi3xW7Z2=
+IC0VJljGGiu3STj2vH5yth3ih-2Fgrftmu9wj9oWmzXkqAsQCwLTUjWWJ-2BAtwx2czDzQ-2BUz=
+HtrE0TXC5tLPZi2M3r0um-2FnF69UkiZj5nZVe7HW70-2F5gHzgZbUQkWQUDhe4DwwgZhq6bTvp=
+jN2qxzLL9MJ3xxVXamby-2BocsKvH-2FLtu-2BjQThshVauCJeCqi5YWxXIDx3xuvRgZvKoqjCm=
+UiXH86KCE2ceNSj-2F876l7ep36InJXU0hPJyPqmV-2BNZQdoA2cEjwB1pJMhSkXcFqCwlP9lLM=
+U3yctC8N4032r451b9Z1-2FJKBSgLUZhW8CnVog6LsrEFZBd8SsydHjNg5dftdlk8iBTKCuji73=
+A-3D-3D" target=3D"_blank"
+                                                              style=3D"disp=
+lay:inline-block;color:#000000;font-family:Helvetica,Arial,sans-serif;font-=
+size:13px;font-weight:normal;line-height:0;text-decoration:none;text-transf=
+orm:none;padding:0;padding-top:0;padding-left:0;padding-right:8px;padding-b=
+ottom:0;">
+                                                              <span
+                                                                  style=3D"=
+font-size:12px;font-family:Helvetica,Arial,sans-serif;font-weight:400;color=
+:#91918d;line-height:117%;text-decoration:underline;">Start
+                                                                  your comm=
+unity</span></a>
+                                                          <!--[if mso | IE]=
+>
+      </td><td style=3D"padding:0;padding-top:0;padding-left:0;padding-righ=
+t:0;padding-bottom:0;" class=3D"l-outlook -outlook -outlook">
+      <![endif]--> <a class=3D"l  " href=3D"https://url2344.community.nas.i=
+o/ls/click?upn=3Du001.3bvFmuGshLO4fT-2BFpxxTQt0vTYTOYHgfmx8SugPttbvx8egdpdn=
+eo7PaDBIfqUoQC2uNlilxZ3B05NJyUowqkpupeNaeavVe59j69imyfzgpsFoaxZilSK4-2B5Qpn=
+oyISrj7lp-2BZS9PZx2hJNlU9CtHmqaOz2OEE2xGXP-2F-2B4Kvird8L5WEKgzYnTCm7vr7u2j-=
+2FGIdc5zZBU-2B7Ks4MEPf-2B4GbPcLWTC-2BF8hK7BePKfaV8CjJFNtd45wbxVAsFqNG07tROW=
+8KPwLyfUgU96awd-2F1K6zpDVrLP6mTrccXMg3sgKN5hVgA-2F9FGEH8f978Ln3hkqV__BhaiuQ=
+3L8BylGsjSQfEyeHHoz7nrzi7FUkhO8KXJuFALpi3xW7Z2IC0VJljGGiu3STj2vH5yth3ih-2Fg=
+rftmu9wj9oWmzXkqAsQCwLTUjWWJ-2BAtwx2czDzQ-2BUzHtrE0TXC5tLPZi2M3r0um-2FnF69U=
+kiZj5nZVe7HW70-2F5gHzgZbUQkWQUDhe4DwwgZhq6bTvpUsRgh1-2FK8D4IDKQPu95cHpCo9rE=
+r8RFXVe4ZgRPxN2kQTBXkkRvvw2zDFOFlNbvKkvXvH5VlSxvNmahnnSklFuDot-2BxVtv53q1Qo=
+q34B-2BYLUSl0mGcOYI-2BCsJxDdms1DfJzU-2FyQmMvJ2JbjncHbRxyFYjm0NRB-2BboNqZ7iL=
+wS8svqFi-2Bkk66CSi1L5VnwUQ3HAkT6fKMyeAst9j4A-2BWtgw-3D-3D" target=3D"_blank=
+"
+                                                              style=3D"disp=
+lay:inline-block;color:#000000;font-family:Helvetica,Arial,sans-serif;font-=
+size:13px;font-weight:normal;line-height:0;text-decoration:none;text-transf=
+orm:none;padding:0;padding-top:0;padding-left:0;padding-right:0;padding-bot=
+tom:0;">
+                                                              <span
+                                                                  style=3D"=
+font-size:12px;font-family:Helvetica,Arial,sans-serif;font-weight:400;color=
+:#91918d;line-height:117%;text-decoration:underline;">Unsubscribe</span>
+                                                          </a>
+                                                          <!--[if mso | IE]=
+>
+      </td></tr></table>
+      <![endif]-->
+                                                      </div>
+                                                  </td>
+                                              </tr>
+                                          </tbody>
+                                      </table>
+                                  </div>
+                                  <!--[if mso | IE]>
+      </td></tr></table>
+      <![endif]-->
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+      </footer>
+    </div>
+  <img src=3D"https://url2344.community.nas.io/wf/open?upn=3Du001.gEc4V1xrG=
+-2BBPK7P0X3VlOqbu-2BB12XVtmXvFeoqC4-2Bu7jFX2qY9oXwSo4QPbQMVuEKC7E6FTzu1SxUz=
+sXt8MIvxAPh4U6y-2F06cWujfGLV-2FPpCOVvWSO1W3cXAYdWee3-2FyyAEjpCfdtkls3WWTg5S=
+WSwmtwf-2FyDFwcFmw1fHqjSnjEgzTjvVjCwJzG2vpUkpVTjwBv2FRP1bmWDoI3hfhC1xr7WqoW=
+ytukqyD7SZf0xSZ2CPHAoEeWJIV62zmsE-2Bmlz6UbcJGdhOku6qrwLdXqu9ZdUxwzsJXHpMlLj=
+PBsxJWgoHPv4VjvI8Vbs-2BfJtQ1cotbbGCvQcnmea1dGFgzTzcTgqn8KjGX2ZOQV9a7UAGqkiq=
+RWL85QvmRJV0CRvfF66X2hci8C7fDIpuqXuVqf5w-3D-3D" alt=3D"" width=3D"1" height=
+=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !important;bor=
+der-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;m=
+argin-right:0 !important;margin-left:0 !important;padding-top:0 !important;=
+padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !impo=
+rtant;"/></body>
+</html>
