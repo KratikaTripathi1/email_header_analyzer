@@ -1,8 +1,23 @@
-Delivered-To: kratikalko522@gmail.com
-Received: by 2002:a05:612c:1d8d:b0:4e6:2ea:bf93 with SMTP id ja13csp1334472vqb;
+ Attachment Kratika Tripathi email security.pdf added.Conversation opened. 1 unread message.
+
+Skip to content
+Using Gmail with screen readers
+1 of 6,605
+sample_header
+Inbox
+
+Kratika tripathi <kratikalko522@gmail.com>
+Attachments
+1:43 AM (4 minutes ago)
+to me
+
+ 4 Attachments
+  •  Scanned by Gmail
+Delivered-To: test@gmail.com
+Received: by 2102:a05:612c:1d1d:b0:4e6:2ea:bf13 with SMTP id ja13csp2334477vqb;
         Mon, 4 Aug 2025 04:39:08 -0700 (PDT)
 X-Google-Smtp-Source: AGHT+IFreq01AVX3FPdijOyHZBJdjr9vxabjfGkbrxnsdtnaedjscINCM9I6ET675HeSBrhRS8eo
-X-Received: by 2002:a05:6a00:6f5c:b0:76b:ed13:40f5 with SMTP id d2e1a72fcca58-76bed13429amr11466787b3a.18.1754307548162;
+X-Received: by 2102:c05:622c:5d1d:b0:4e6:2ea:bf13 with SMTP id d2e1a72fcca58-76bed13429amr11466787b3a.18.1754307548162;
         Mon, 04 Aug 2025 04:39:08 -0700 (PDT)
 ARC-Seal: i=1; a=rsa-sha256; t=1754307548; cv=none;
         d=google.com; s=arc-20240605;
@@ -27,19 +42,19 @@ ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc
 ARC-Authentication-Results: i=1; mx.google.com;
        dkim=pass header.i=@community.nas.io header.s=s1 header.b=AQsaULYT;
        dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=fLNNalmo;
-       spf=pass (google.com: domain of bounces+34218064-68b5-kratikalko522=gmail.com@em6382.community.nas.io designates 149.72.83.253 as permitted sender) smtp.mailfrom="bounces+34218064-68b5-kratikalko522=gmail.com@em6382.community.nas.io";
+       spf=pass (google.com: domain of bounces+34218064-68b5-test=gmail.com@em6382.community.nas.io designates 149.72.83.253 as permitted sender) smtp.mailfrom="bounces+34218064-68b5-test=gmail.com@em6382.community.nas.io";
        dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=nas.io
-Return-Path: <bounces+34218064-68b5-kratikalko522=gmail.com@em6382.community.nas.io>
+Return-Path: <bounces+34218064-68b5-test=gmail.com@em6382.community.nas.io>
 Received: from o1.community.nas.io (o1.community.nas.io. [149.72.83.253])
         by mx.google.com with ESMTPS id d2e1a72fcca58-76bccfe374csi10092362b3a.134.2025.08.04.04.39.07
-        for <kratikalko522@gmail.com>
+        for <test@gmail.com>
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
         Mon, 04 Aug 2025 04:39:08 -0700 (PDT)
-Received-SPF: pass (google.com: domain of bounces+34218064-68b5-kratikalko522=gmail.com@em6382.community.nas.io designates 149.72.83.253 as permitted sender) client-ip=149.72.83.253;
+Received-SPF: pass (google.com: domain of bounces+34218064-68b5-test=gmail.com@em6382.community.nas.io designates 149.72.83.253 as permitted sender) client-ip=149.72.83.253;
 Authentication-Results: mx.google.com;
        dkim=pass header.i=@community.nas.io header.s=s1 header.b=AQsaULYT;
        dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=fLNNalmo;
-       spf=pass (google.com: domain of bounces+34218064-68b5-kratikalko522=gmail.com@em6382.community.nas.io designates 149.72.83.253 as permitted sender) smtp.mailfrom="bounces+34218064-68b5-kratikalko522=gmail.com@em6382.community.nas.io";
+       spf=pass (google.com: domain of bounces+34218064-68b5-test=gmail.com@em6382.community.nas.io designates 149.72.83.253 as permitted sender) smtp.mailfrom="bounces+34218064-68b5-test=gmail.com@em6382.community.nas.io";
        dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=nas.io
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=community.nas.io; h=content-transfer-encoding:content-type:date:from:mime-version:subject: reply-to:to:cc:content-type:date:feedback-id:from:subject:to; s=s1; bh=gJhQcrrNjc7CYYxtHOD1HbJGDkFEMOUcYTZX0JgENjo=; b=AQsaULYT0kfnDpK6t38qmkG2Wq1/Ls/ZRgXSD6ZDO+WfO5nVzl1lZu1Hkk+d8pb5QEix q1VMFBtTefyqEPOIkWuiKp352h4ab5xRGGIx11w4s9k3A64HNXTMThr5cyetnhV3SVNVA8 aU4p6qQeYKstHw4QH00IldccLmQSiiRd7XJej+Cxj0/VWxWk8Cj0VAOnleteK/EOSO1B1c ZQ8A9fhIadycKGBo+tKaZjUvHHhB4AgwTu9/DtEFEGZPtmeSMPsYjNnZ29Xn0ldT8daE1Y gV886fpl1lYbqTRLDywz+rcpgkkLQtcgSnQ6hocqO9rOFc6MOoKUZEfMhvwpr7vQ==
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info; h=content-transfer-encoding:content-type:date:from:mime-version:subject: reply-to:to:cc:content-type:date:feedback-id:from:subject:to; s=smtpapi; bh=gJhQcrrNjc7CYYxtHOD1HbJGDkFEMOUcYTZX0JgENjo=; b=fLNNalmoAN5JSwZ02bA7+4zkWPUNaa1k/JsCmxgW1dbiPVDIBxo2n2/pc4KTAzmhMxW7 6pTzPuukY6vKUfa5vCH9CBNkTDV5hGgyw/vp0tgM+KF/BZ/xgNmOsRdMqfOkwodYvIE0pV 3leLO+erBJ29SMC5N36/yXeI08hRCygsk=
@@ -55,7 +70,7 @@ Subject: 71 digital products you could be building
 Reply-To: Nuseir Yassin <no-reply2@nas.io>
 X-SG-EID: u001./xpcJzu7E2S2kAi8h8ocvc+CHrfhJRMFA28CBwE92kYDk6DjnN8FlD65PtqrKMz7Fsskz3lvvqzjo8fL8gK1fvLsyBLPXXseFSaud//nPPKHRXq29nXJdETMWhVfEhf+BZ3/SMLHHjz6+x6LMjxM8O8pinuoaTvzHvSrKzz48k6DUX0swQfPGQnc4Yzg6em65Mb9H81EV+imeBs9SQ373rWmU0UGV4Jv2PB3rRNEnvDTHH5LibMQdsNm52xE14o3/Zy3uoSZ5u2j0AmbiwzXq499rOFiFAp2+g2nQgcQ244=
 X-SG-ID: u001.SdBcvi+Evd/bQef8eZF3BrJZJVKOCSPgTf43dHf/B/9oqK3LNtXX5B3G0Wadj/qiu6sInvdFDLn+uwFA+MNEj4IJJTllKugp4W/yRbpKxft0K8I2ydgtW3AUoH9AeGswq1Td5n335Coczc4iZk+WNril5D4arb72aMxKUc/83ozzsDh2tYgWLoaJkWnaceu4olnLY2jvMSRJ3kKmiuPLcw==
-To: kratikalko522 <kratikalko522@gmail.com>
+To: test <test@gmail.com>
 X-Entity-ID: u001.zSBSAnlDn3eJhC+BZICivA==
 
 <!DOCTYPE html>
@@ -200,7 +215,7 @@ mportant;padding-right:0!important;}td.v.s-8>div.il>a.l.m{padding-right:8px=
 "
     style=3D"mso-line-height-rule:exactly;word-spacing:normal;background-co=
 lor:#fffffe !important;">
-    <div style=3D"display:none;">Hey kratikalko522,  Most people don=E2=80=
+    <div style=3D"display:none;">Hey test,  Most people don=E2=80=
 =99t start a business because they think they don=E2=80=99t have an idea.  =
  So we asked our AI Cofounder: =E2=80=9CWhat could I sell if I=E2=80=99m a =
 [mom/coach/professional/student]?=E2=80=9D   Here=E2=80=99s what it came up=
@@ -621,8 +636,7 @@ y>
 tr>
                                                                            =
    <td style=3D"width:536px;"><hr style=3D"border-top: 1px solid #E2E2DF;"/=
->
-                                                                           =
+>                                                                        =
    </td>
                                                                           <=
 /tr>
@@ -649,7 +663,7 @@ dy>
         <section style=3D"margin:24px auto; max-width:600px;padding:0 32px"=
 ><p style=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-he=
 ight: 160%;color: #1B1B18;margin:0; text-align: left;"><span>Hey </span><sp=
-an>kratikalko522</span><span>,</span></p><p style=3D"font-family:Helvetica,=
+an>test</span><span>,</span></p><p style=3D"font-family:Helvetica,=
 Arial,sans-serif;font-size: 16px;line-height: 160%;color: #1B1B18;margin:0;=
 height:24px; text-align: left;"><span style=3D"margin-top:24px"></span></p>=
 <p style=3D"font-family:Helvetica,Arial,sans-serif;font-size: 16px;line-hei=
@@ -1143,3 +1157,5 @@ argin-right:0 !important;margin-left:0 !important;padding-top:0 !important;=
 padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !impo=
 rtant;"/></body>
 </html>
+sample_header.txt
+Displaying analyzer.py.
